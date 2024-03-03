@@ -57,6 +57,7 @@
     "@progress/kendo-theme-bootstrap": "^7.0.1",
     "@progress/kendo-theme-default": "^7.0.1",
     "@progress/kendo-theme-material": "^7.0.1",
+    "axios": "^1.6.7",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18"
