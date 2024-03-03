@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test": "jest --passWithNoTests --maxWorkers=50%",
+    "test:watch": "jest --watch --maxWorkers=25%",
+    "test:ci": "jest --runInBand"
   },
   "dependencies": {
     "@progress/kendo-data-query": "^1.7.0",
@@ -59,6 +62,7 @@
     "@progress/kendo-theme-material": "^7.0.1",
     "axios": "^1.6.7",
     "next": "14.0.3",
+    "node-fetch": "2",
     "react": "^18",
     "react-dom": "^18"
   },
