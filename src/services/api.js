@@ -6,12 +6,14 @@ const mapMovieData = (movie) => ({
   originalLanguage: movie.original_language,
 });
 
+const apiKey = process.env.NEXT_PUBLIC_TMDB_TOKEN;
+const apiUrl = process.env.NEXT_PUBLIC_TMBD_BASE_URL;
+
 const fetchMovies = async (page) => {
-  const apiKey = process.env.NEXT_PUBLIC_TMDB_TOKEN;
-  const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&page=${page}`;
+  const fetchMoviesEndpoint = `${apiUrl}/3/discover/movie?api_key=${apiKey}&page=${page}`;
 
   try {
-    const response = await fetch(apiUrl);
+    const response = await fetch(fetchMoviesEndpoint);
 
     if (!response.ok) {
       throw new Error(`Failed to fetch data for page ${page}`);
