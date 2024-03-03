@@ -1,5 +1,6 @@
 "use client";
 
+import { useMovies } from "@/contexts/MoviesContext";
 import { process } from "@progress/kendo-data-query";
 import {
   GridColumn as Column,
@@ -8,16 +9,21 @@ import {
 } from "@progress/kendo-react-grid";
 import { GridPDFExport } from "@progress/kendo-react-pdf";
 import "@progress/kendo-theme-default/dist/all.css";
-import { useRef } from "react";
+import { useEffect } from "react";
 
 export const KendoGrid = () => {
-  const exportPDF = () => {
-    gridPDFExport.save();
-  };
+  const {
+    dataState,
+    moviesList,
+    exportPDF,
+    fetchMovies,
+    gridPDFExportRef,
+    onDataStateChange,
+  } = useMovies();
 
-  const onDataStateChange = (e) => {
-    setDataState(e.dataState);
-  };
+  useEffect(() => {
+    fetchMovies();
+  }, []);
 
   const grid = (
     <Grid
@@ -65,8 +71,6 @@ export const KendoGrid = () => {
       />
     </Grid>
   );
-
-  const gridPDFExportRef = useRef(null);
 
   return (
     <div className="grid-container">
