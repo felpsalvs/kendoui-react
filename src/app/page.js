@@ -1,5 +1,5 @@
 "use client";
-import { KendoGrid } from "../components/KendoGrid";
+import { KendoGrid } from "./components/KendoGrid";
 
 export default function Home() {
   return (
