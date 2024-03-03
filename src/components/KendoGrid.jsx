@@ -10,6 +10,7 @@ import {
 import { GridPDFExport } from "@progress/kendo-react-pdf";
 import "@progress/kendo-theme-default/dist/all.css";
 import { useEffect } from "react";
+import { DateCell } from ".";
 
 export const KendoGrid = () => {
   const {
@@ -56,6 +57,7 @@ export const KendoGrid = () => {
         field="releaseDate"
         filter="date"
         title="Release Date"
+        cell={DateCell}
       />
       <Column
         className="column"
