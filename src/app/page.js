@@ -1,6 +1,6 @@
 "use client";
 import { MoviesProvider } from "@/contexts/MoviesContext";
-import { KendoGrid } from "./components/KendoGrid";
+import { KendoGrid } from "../components/KendoGrid";
 
 export default function Home() {
   return (
