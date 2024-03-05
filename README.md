@@ -1,40 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Este é um projeto React.js usando KendoUI inicializado com a extensão do [VSCode](https://www.telerik.com/kendo-react-ui/components/getting-started/vscode-extensions/).
 
-## Getting Started
+## Instalação
 
-First, run the development server:
+1. Clone o repositório: `https://github.com/felpsalvs/kendoui-react.git`
+2. Instale as dependências: `npm install` ou `yarn install`
+
+## Configuração
+
+Certifique-se de configurar as variáveis de ambiente. Crie um arquivo `.env` na raiz do projeto e adicione as variáveis. 
+
+1. É necessário criar uma conta no [TMDB](https://www.themoviedb.org/) e gerar sua Chave da API em `Configurações -> API` e preencha:
+
+```bash
+NEXT_PUBLIC_TMDB_TOKEN=
+```
+
+2. A variável abaixo é a URL da API, basta copiar e usar:
+
+```bash
+NEXT_PUBLIC_TMBD_BASE_URL=https://api.themoviedb.org
+```
+
+## Executando o Projeto
+
+Para iniciar o ambiente de desenvolvimento, execute:
 
 ```bash
 npm run dev
-# or
+# ou
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o resultado.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Executando Testes
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Para executar os testes, utilize o seguinte comando:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+npm test
+# ou
+yarn test
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Para executar os testes em modo observador, use:
 
-## Learn More
+```bash
+npm run test:watch
+# ou
+yarn test:watch
+```
 
-To learn more about Next.js, take a look at the following resources:
+Para executar os testes em modo CI, utilize:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+npm run test:ci
+# ou
+yarn test:ci
+```
