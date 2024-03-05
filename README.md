@@ -7,7 +7,7 @@ Este é um projeto React.js usando KendoUI inicializado com a extensão do [VSCo
 
 ## Configuração
 
-Certifique-se de configurar as variáveis de ambiente. Crie um arquivo `.env` na raiz do projeto e adicione as variáveis. 
+Certifique-se de configurar as variáveis de ambiente e estar na versão 20 ou maior do Node. Crie um arquivo `.env` na raiz do projeto e adicione as variáveis. 
 
 1. É necessário criar uma conta no [TMDB](https://www.themoviedb.org/) e gerar sua Chave da API em `Configurações -> API` e preencha:
 
